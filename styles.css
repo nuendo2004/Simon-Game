@@ -1,0 +1,165 @@
+body {
+  text-align: center;
+  background-color: #000000e8;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin:0;
+  padding: 50px;
+  color: #FEF2BF;
+}
+header {
+  margin-top: 3rem;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+h1 {
+  color: aliceblue;
+  margin:0;
+  padding-left: 5rem;
+  font-size: 6rem;
+}
+.restart {
+  color: white;
+  border: none;
+  font-size: 2.8rem;
+  font-weight: 500;
+  border-radius: 100px;
+  padding: 10px 60px;
+  background-color: rgba(205, 0, 0, 0.805);
+  cursor: pointer;
+}
+.restart-grey {
+  background: rgb(38, 37, 37);
+  cursor:default;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 25%;
+  margin: auto;
+
+}
+.screen {
+  margin:auto;
+  height: 130px;
+  width: 50vw;
+  
+}
+.btn {
+  justify-self: center;
+  margin: 25px;
+  /* display: inline-block; */
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: rgba(234, 12, 12, 0.903);
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: rgb(0, 128, 0);
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+
+
+h2 {
+  padding-left:45px;
+  text-align: left;
+  color: white;
+  font: 3.5em sans-serif;
+}
+
+.footer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color : rgba(197, 193, 193, 0.954);
+}
+.footer span {
+  font-style: italic;
+  color:azure;
+  font-size: 1.6rem;
+  margin-left: 1.2rem;
+}
+/* @media screen and (max-width: 1073px) and (min-width:768px) {
+  h1 {
+
+    font-size: 6rem;
+  }
+  #level-title {
+    font-size: 1rem;
+  }
+  .container {
+    justify-content: center;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  .restart {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 500;
+    border-radius: 100px;
+    padding: 60px;
+    background-color: rgb(84, 193, 12);
+  }
+  .screen {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+  #level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    padding-top:1rem;
+    color: #FEF2BF;
+  }
+
+  h1 {
+    margin:0;
+    padding-left: 5rem;
+    font-size: 9rem;
+  }
+  header {
+    margin-top: 6rem;
+    font-size: 10rem;
+    color: aliceblue;
+  }
+  .container {
+    margin-top: 30rem;
+    width: 100vw;
+    margin: 0;
+ 
+  }
+
+  .btn {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+
