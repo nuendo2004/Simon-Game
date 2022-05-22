@@ -17,6 +17,8 @@ let failed = new Audio("sounds/wrong.mp3")
 
 
 start.addEventListener('click', () => {
+    document.querySelector(".text_intro").classList.add("hide")
+    start.classList.add("restart-grey")
     if (gamestarted == false){
         newGame();
         document.querySelector('body').classList.remove('game-over')
@@ -24,6 +26,7 @@ start.addEventListener('click', () => {
 })
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", (e) => {
+        
         pressed(e.target.id, 100)
         let audio = new Audio("sounds/" + e.target.id + ".mp3")
         audio.play() 
@@ -54,7 +57,7 @@ function newGame() {
     document.getElementById("level-title").innerHTML = "Level " + level
     playerCombo = [];
     simonSays = button(Math.floor(Math.random() * 4) + 1)
-    start.classList.add("restart-grey")
+    
     setTimeout(() =>{pressed(simonSays, 300)
     }, 1000)
     combo.push(simonSays);
@@ -66,6 +69,7 @@ function checkResult(id, count) {
     console.log('checkResult'+ count)
     if (id != combo[count-1]) {
         failed.play();
+        start.classList.remove("restart-grey")
         if (level > highestscore)
             highestscore = level;
             document.getElementById("score").innerHTML = highestscore;
